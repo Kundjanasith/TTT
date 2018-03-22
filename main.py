@@ -110,6 +110,7 @@ if __name__ == "__main__":
             print("You Won!\n")
         else:
             print("It's a draw!\n")
+        print("-------------")
         display_board(board)
 
         # print("--------------------------")
