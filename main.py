@@ -31,7 +31,8 @@ def check_if_ended(state):
     return 0
 
 
-if __name__ == "__main__":
+# if __name__ == "__main__":
+def run():
     grid_size = 3
     with open("model/modelO_full.json", "r") as jfile:
         model1 = model_from_json(json.load(jfile))
