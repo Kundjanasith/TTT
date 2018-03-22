@@ -5,8 +5,25 @@ import json
 import numpy as np
 import random
 from keras.models import model_from_json
-from rl import display_board
+# from rl import display_board
 from env import Env
+
+
+def display_board(state):
+    print("| ", end='')
+    for i in range(3):
+        for j in range(3):
+            idx = 3 * i + j
+            if state[idx] == 1:
+                print("O | ", end='')
+            elif state[idx] == -1:
+                print("X | ", end='')
+            else:
+                print('  | ', end='')
+        print()
+        if i != 2:
+            print('| ', end="")
+    print("-------------")
 
 def check_if_ended(state):
     combinations = [
